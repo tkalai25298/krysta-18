@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <title>Krysta : Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="" name="description">
+        <meta content="" name="author">
+        <link rel="shortcut icon" href="images/favicon.png">
+        <!-- START CSS STYLE  -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/popup.css" media="screen">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/color/default.css" id="theme" rel="stylesheet">
+        <link href="css/style-responsive.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/anim.css">
+        <script type="text/javascript">
+           $('#reg_submit').on('click', function(e) {
+              e.preventDefault();
+              var f = document.getElementsByTagName('form')[0];
+              if(f.checkValidity()) {
+                 $.ajax({
+                    url: 'https://script.google.com/macros/s/AKfycbzsygBP48lPo0UAjQwXEiQPoqquZmw9qfh6NpkiGTDlDQ3xbv7h/exec',
+                    type: "post",
+                    data: $('form#register_form').serialize(),
+                    beforeSend: function() {
+                       $("#reg_submit").prop('disabled', true);
+                    },
+                    success: function(response) {
+                       console.log(response.result)
+                       alert("Registered!")
+                       $("#reg_submit").prop('disabled', false)
+                       $('form#register_form')[0].reset()
+                       $('select').children('option').first().prop('selected', true)
+                       $('select').trigger("chosen:updated")
+                    }
+                 })
+              } else {
+                 alert('Invalid Data or Empty Fields')
+              }
+           })
+        </script>
+        <!--  END CSS STYLE  -->
+    </head>
+    <body data-spy="scroll" data-target="#header-navbar" data-offset="51">
+      <!-- start main-container -->
+      <div id="main-container" class="fade">
+          <!-- start header -->
+          <div id="header" class="header navbar navbar-fixed-top">
+              <!-- start container -->
+              <div class="container">
+                  <!-- start navbar-header -->
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
+                          <i class="fa fa-bars"></i>
+                          <i class="fa fa-close"></i>
+                      </button>
+                      <a href="index.html" class="navbar-brand"><img src="img/logo_s.png" alt="logo"></a>
+                  </div>
+                  <!-- end navbar-header -->
+                  <!-- start navbar-collapse -->
+                  <div class="collapse navbar-collapse" id="header-navbar">
+
+                      <ul class="nav navbar-nav navbar-right">
+                          <li class="active"><a href="#home" data-click="scroll-to-target">HOME</a></li>
+                          <li><a data-toggle="collapse" href="#aboutus" data-click="scroll-to-target">ABOUT</a></li>
+                          <li><a href="#workshops" data-click="scroll-to-target">WORKSHOPS</a></li>
+                          <!-- <li><a href="#services" data-click="scroll-to-target">SERVICES</a></li> -->
+                          <!-- <li><a href="#ourteam" data-click="scroll-to-target">TEAM</a></li> -->
+                          <li><a href="#events" data-click="scroll-to-target">EVENTS</a></li>
+                          <!-- <li><a href="#client" data-click="scroll-to-target">CLIENT</a></li> -->
+
+                          <li><a href="#gallery" data-click="scroll-to-target">GALLERY</a></li>
+                          <li><a href="#contactus" data-click="scroll-to-target">CONTACT</a></li>
+                      </ul>
+                  </div>
+                  <!-- end navbar-collapse -->
+              </div>
+              <!-- end container -->
+          </div>
+          <!-- end header -->
+          <!-- start home -->
+          <div id="home" class="content bg home parallax1">
+              <!-- start container -->
+              <div class="container banner-content">
+                  <img src="img/smse_logo.png" alt="">
+                  <h3>Society Of <span class="text-color">Material Science</span> Engineers</h3>
+                  <a href="#contactus" data-click="scroll-to-target" class="btn btn-theme">Register</a>
+                  <!-- <a href="#" data-click="scroll-to-target" class="btn btn-outline">Accomodation</a><br> -->
+              </div>
+              <!-- end container -->
+              <a href="#aboutus" data-click="scroll-to-target">
+                  <div class="button-scroll" data-scroll-nav="1"><span><i class="fa fa-angle-down"></i></span></div>
+              </a>
+          </div>
+          <!-- end home -->
+          <!-- start aboutus -->
+          <div id="aboutus" class="about" data-scrollview="true">
+              <!-- start container -->
+              <div class="container content" data-animation="true" data-animation-type="fadeInDown">
+                  <h2 class="content-heading" data-animation="true" data-animation-type="fadeInDown"><span class="title-color">ABOUT</span> US</h2>
+                  <div class="divider text-center">
+                      <span class="outer-line"></span>
+                      <span class="fa fa-user" aria-hidden="true"></span>
+                      <span class="outer-line"></span>
+                  </div>
+                  <p class="content-desc" data-animation="true" data-animation-type="fadeInDown">
+                      The Society of Materials Science Engineers of College of Engineerig,Guindy, is a disciplined and dedicated, entirely student run society, with the prime motive of empowering the student community and making them equipped to tackle all the challenges that come in their way of becoming pioneers in the field of materials science. A series of guest lectures, seminars, workshops and other events are conducted every year as a part of SMSE’s scheme for each academic year.
+                  </p>
+              </div>
+              <div class="about-bg content bg parallax2">
+                  <div class="white_overlay_right"></div>
+                  <div class="container">
+                      <!-- start row -->
+                      <div class="row no-padding">
+                          <!-- strart col-6 -->
+                          <div class="col-md-6 col-sm-6 col-md-offset-6 col-sm-offset-6 no-padding" data-animation="true" data-animation-type="fadeInLeft">
+                              <!-- start about -->
+                              <div class="aboutus">
+                                  <h3>About KRYSTA</h3>
+                                  <p>Krysta is the intracollege technical symposium organized by the Society of Materials Science engineers(SMSE) , usually held in the month of September for a period of  two days ,every year and is aimed at imparting knowledge and invoking the creativity of the students through many of its signature technical events. It also incorporates a few fun and lively events which are likely to be pressure busters for all the participants. Workshops, on the most “ hot and happening” topics of materials science, are the main attractions of this extravagant event. Eminent speakers from diverse backgrounds, ranging from industry to academia, grace the occasion and succed in promulgating the knowledge acquired by them over the years. Being an intracollegiate, it also plays a part in strengthening inter-department relations.
+                                <br/><br/>The very first edition of Krysta, conducted successfully in the year 2011, received an overwhelming response. So, from then on, Krysta never fails to exceed expectations and thus continues to stand strong, representing its resounding success.  </p>
+                                  <!-- <div class="item-box">
+                                      <i class="fa fa-anchor"></i>
+                                      <div class="item-right">
+                                          <h4>Our Mission</h4>
+                                          <p>
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                              Vestibulum posuere augue eget ante porttitor fringilla.
+                                          </p>
+                                      </div>
+                                  </div>
+                                  <div class="item-box">
+                                      <i class="fa fa-support"></i>
+                                      <div class="item-right">
+                                          <h4>Custom Support</h4>
+                                          <p>
+                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                              Vestibulum posuere augue eget ante porttitor fringilla.
+                                          </p>
+                                      </div>
+                                  </div> -->
+                              </div>
+                              <!-- end about -->
+                          </div>
+                          <!-- end col-6 -->
+                      </div>
+                      <!-- end row -->
+                  </div>
+
+          </div>
+          <!-- end about -->
+          <!-- start workshops -->
+          <div id="workshops" class="content pricing-tables" data-scrollview="true">
+              <!-- start container -->
+              <div class="container" data-animation="true" data-animation-type="fadeInUp">
+                  <h2 class="content-heading" data-animation="true" data-animation-type="fadeInDown"><span class="title-color">OUR</span> WORKSHOPS</h2>
+                  <div class="divider text-center">
+                      <span class="outer-line"></span>
+                      <span class="fa fa-dollar" aria-hidden="true"></span>
+                      <span class="outer-line"></span>
+                  </div>
+                  <p class="content-desc" data-animation="true" data-animation-type="fadeInDown">
+                    Workshops are an integral part of Krysta, as they provide an enriching experience and also an exposure to industry environments and a strong base in research and development.
+                  </p>
+                  <!-- start workshops-table -->
+                  <div class="row">
+                      <!-- <div class="col-md-4 col-sm-4">
+                          <div class="bs bs-pricing" data-animation="true" data-animation-type="fadeInDown">
+                              <div class="cotent">
+                                  <h3 class="category">Personal</h3>
+                                  <div class="bs-caption"><small>$</small>11</div>
+                                  <ul>
+                                      <li><b>5 GB</b> Space</li>
+                                      <li><b>2 GB</b> RAM</li>
+                                      <li><b>24/7</b> Tech Support</li>
+                                      <li><b>Auto</b> Backup</li>
+                                      <li>Monthly Backups</li>
+                                      <li>8 CPU Core</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-action">Buy Now</a>
+                              </div>
+                          </div>
+                      </div> -->
+
+                      <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                          <div class="bs bs-pricing highlight" data-animation="true" data-animation-type="fadeInUp">
+                              <div class="cotent">
+                                  <h3 class="category">Corrosion - Its characterisation and control</h3>
+                                  <!-- <div class="bs-caption">2017</div> -->
+
+                                  <a href="https://www.townscript.com/e/krysta-034441" class="btn btn-white">Pay Now</a>
+                              </div>
+                          </div>
+                      </div>
+
+
+                  </div>
+              </div>
+              <!-- end container -->
+          </div>
+          <!-- end workshops -->
+          <!-- start portfolio -->
+          <div id="events" class="portfolio content" data-scrollview="true">
+              <!-- start container -->
+              <div class="container">
+                  <h2 class="content-heading" data-animation="true" data-animation-type="fadeInDown"><span class="title-color">OUR</span> EVENTS</h2>
+                  <div class="divider text-center">
+                      <span class="outer-line"></span>
+                      <span class="fa fa-image" aria-hidden="true"></span>
+                      <span class="outer-line"></span>
+                  </div>
+                  <p class="content-desc" data-animation="true" data-animation-type="fadeInDown">
+                     The events conducted, both technical and non-technical, kindle the dormant talents of the contestants and help them shine through.
+                  </p>
+                  <!-- start row -->
+                  <div class="row">
+                      <div class="portfolio-filter">
+                          <button class="filter-button" data-filter="all">All</button>
+                          <button class="filter-button" data-filter="technical">Technical</button>
+                          <button class="filter-button" data-filter="non-technical">Non-Technical</button>
+                          <!-- <button class="filter-button" data-filter="online">Online</button> -->
+                          <!-- <button class="filter-button" data-filter="databaseintegration">Database Integration</button> -->
+                      </div>
+                      <!-- start portfolio item -->
+                      <div class="portfolio_item col-lg-4 col-md-4 col-sm-6 col-xs-12 filter technical">
+                          <img class="img-responsive" alt="portfolio" src="img/events/tech_quiz.jpg" />
+                          <div class="overlay-background">
+                              <div class="inner"></div>
+                          </div>
+                          <div class="overlay">
+                              <div class="inner-overlay">
+                                  <div class="inner-overlay-content with-icons">
+                                      <a class="popup-img" href="img/events/starter.jpg"><i class="fa fa-search"></i></a>
+                                      <h4>TECHNICAL QUIZ</h4>
+                                      <h5>  The Technical Quiz competition is an event that actually tests the student’s retention and recollection of knowledge in real life situations. Encourages independent study and academic excellence.
+                                      Queries:</h5><h4>N. Sathish Kumar : 9487253073<br/>Chellamal Nandhini : 9488988099</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end portfolio item -->
+                      <!-- start portfolio item -->
+                      <div class="portfolio_item col-lg-4 col-md-5 col-sm-6 col-xs-12 filter non-technical">
+                          <img class="img-responsive" alt="portfolio" src="img/events/mini_militia.jpg" />
+                          <div class="overlay-background">
+                              <div class="inner"></div>
+                          </div>
+                          <div class="overlay">
+                              <div class="inner-overlay">
+                                  <div class="inner-overlay-content with-icons">
+                                      <a class="popup-img" href="img/events/mini_militia.jpg"><i class="fa fa-search"></i></a>
+                                      <h4>MINI MILITIA(Doodle Army 2)</h4>
+                                      <h4>  Mini Militia (DA2) is a free-to-play 2D shooter game.<br/>
+                                      Queries:<br/>Karthikeyan : 9080031998<br/>Sivabalamurugan : 8056941565</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end portfolio item -->
+                      <!-- start portfolio item -->
+                      <div class="portfolio_item col-lg-4 col-md-4 col-sm-6 col-xs-12 filter non-technical">
+                          <img class="img-responsive" alt="portfolio" src="img/events/infinity_hunt1.jpg" />
+                          <div class="overlay-background">
+                              <div class="inner"></div>
+                          </div>
+                          <div class="overlay">
+                              <div class="inner-overlay">
+                                  <div class="inner-overlay-content with-icons">
+                                      <a class="popup-img" href="img/events/infinity_hunt2.jpg"><i class="fa fa-search"></i></a>
+                                      <!-- <h3>INFINITY HUNT</h3> -->
+                                      <h5>  The Infinity Stones are six immensely powerful objects tied to different aspects of the universe, created by the Cosmic Entities. <br/>
+                                        Only beings of immense power can directly wield the Stones.<br/>Do you want to become one of them??..Let's meet @Krysta2k18@!!Queries:</h5>
+                                        <h4>Deepan Sam : 7373758659<br/>Kevin : 9629904623</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end portfolio item -->
+
+                      <!-- start portfolio item -->
+                      <div class="portfolio_item col-lg-4 col-md-4 col-sm-6 col-xs-12 filter technical">
+                          <img class="img-responsive" alt="portfolio" src="img/events/pp.jpg" />
+                          <div class="overlay-background">
+                              <div class="inner"></div>
+                          </div>
+                          <div class="overlay">
+                              <div class="inner-overlay">
+                                  <div class="inner-overlay-content with-icons">
+                                      <a class="popup-img" href="img/events/pp.jpg"><i class="fa fa-search"></i></a>
+                                      <h4>PAPER PRESENTATION</h4>
+                                      <h5>  A technical event that participants must present their objective on the given topic with technically added value points. Judging will be based on presentation, the correctness of their points and the unique ideas showcased.<br/>
+                                      Queries:</h5><h4>Santhosh Sivan : 7502218863<br/>Sai Supriya Lakshmi : 6380590928</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end portfolio item -->
+
+                      <!-- start portfolio item -->
+                      <div class="portfolio_item col-lg-4 col-md-4 col-sm-6 col-xs-12 filter technical">
+                          <img class="img-responsive" alt="portfolio" src="img/events/jp1.jpg" />
+                          <div class="overlay-background">
+                              <div class="inner"></div>
+                          </div>
+                          <div class="overlay">
+                              <div class="inner-overlay">
+                                  <div class="inner-overlay-content with-icons">
+                                      <a class="popup-img" href="img/events/jp2.png"><i class="fa fa-search"></i></a>
+                                      <h5> The game is played as one on one with two teams. One member from each team should answer the first question and  whoever answers  first gets the chance to answer rest of the questions.<br/>
+                                      Queries:</h5><h4>Shankar KS : 9600547067<br/>Rekha Subashree : 8939260526</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end portfolio item -->
+                      <div class="portfolio_item col-lg-4 col-md-4 col-sm-6 col-xs-12 filter non-technical">
+                          <img class="img-responsive" alt="portfolio" src="img/events/thunt.jpg" />
+
+                          <div class="overlay-background">
+                              <div class="inner"></div>
+                          </div>
+                          <div class="overlay">
+                              <div class="inner-overlay">
+                                  <div class="inner-overlay-content with-icons">
+                                      <a class="popup-img" href="img/events/thunt.jpg"><i class="fa fa-search"></i></a>
+                                      <h4>TREASURE HUNT</h4>
+                                      <h5>A team event played by cracking the clues, leading to different places and cracking the question/ puzzle given in each place. The one who cracks all the clues within a minimum time will be the winners.<br/> Queries:</h5>
+                                        <h4>Gireshesh Kumar : 9094902904<br/>Sri Rathinamani : 8056745826</h4>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- end portfolio item -->
+
+                  </div>
+                  <!-- end row -->
+              </div>
+              <!-- end portfolio -->
+          </div>
+
+          <!-- start blogs -->
+          <div id="gallery" class="content" data-scrollview="true">
+              <!-- start container -->
+              <div class="container" data-animation="true" data-animation-type="fadeInUp">
+                  <h2 class="content-heading" data-animation="true" data-animation-type="fadeInDown"><span class="title-color">GAL</span>LERY</h2>
+                  <div class="divider text-center">
+                      <span class="outer-line"></span>
+                      <span class="fa fa-comment" aria-hidden="true"></span>
+                      <span class="outer-line"></span>
+                  </div>
+                  <!-- <p class="content-desc" data-animation="true" data-animation-type="fadeInDown">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br>
+                      sed bibendum turpis luctus eget
+                  </p> -->
+                  <!-- start row -->
+                  <div class="row">
+                      <div id="blog_posts" class="blog_posts carousel slide" data-ride="carousel">
+                          <div class="carousel-inner">
+                              <div class="item active">
+                                  <div class="col-md-4 col-sm-4">
+                                      <a href="#" class="thumbnail">
+                                          <img src="img/gallery/gallery1.jpg" alt="">
+                                      </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery2.jpg" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery3.jpg" alt="">
+                                    </a>
+                                  </div>
+                              </div>
+                              <div class="item">
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery4.jpg" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery5.jpg" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery6.jpg" alt="">
+                                    </a>
+                                  </div>
+                              </div>
+                              <div class="item">
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery7.jpg" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery8.jpg" alt="">
+                                    </a>
+                                  </div>
+
+                                  <div class="col-md-4 col-sm-4">
+                                      <a href="#" class="thumbnail">
+                                          <img src="img/gallery/gallery9.jpg" alt="">
+                                          <!-- <div class="caption">
+                                              <h3>Post title</h3>
+                                              <div class="date-rating">
+                                                  <i class="fa fa-calendar"></i> &nbsp; 18/01/2017
+                                                  <span><i class="fa fa-heart"></i> &nbsp; 53</span>
+                                              </div>
+                                              <p>
+                                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti,
+                                                  illum voluptates
+                                                  consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic
+                                                  eaque laborum
+                                                  laudantium. Adipisci, explicabo, asperiores molestias deleniti unde
+                                                  dolore enim
+                                                  quas.
+                                              </p>
+                                          </div> -->
+                                      </a>
+                                  </div>
+                              </div>
+                              <div class="item">
+                                  <div class="col-md-4 col-sm-4">
+                                      <a href="#" class="thumbnail">
+                                          <img src="img/gallery/gallery10.jpg" alt="">
+                                      </a>
+                                  </div>
+
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery12.jpg" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail">
+                                        <img src="img/gallery/gallery14.jpg" alt="">
+                                    </a>
+                                  </div>
+                              </div>
+
+                                <div class="item">
+                                    <div class="col-md-4 col-sm-4">
+                                        <a href="#" class="thumbnail">
+                                            <img src="img/gallery/gallery16.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                      <a href="#" class="thumbnail">
+                                          <img src="img/gallery/gallery17.jpg" alt="">
+                                      </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                      <a href="#" class="thumbnail">
+                                          <img src="img/gallery/gallery18.jpg" alt="">
+                                      </a>
+                                    </div>
+                                </div>
+                          </div>
+                          <!-- start carousel-indicators -->
+                          <ol class="carousel-indicators">
+                              <li data-target="#blog_posts" data-slide-to="0" class="active"></li>
+                              <li data-target="#blog_posts" data-slide-to="1" class=""></li>
+                              <li data-target="#blog_posts" data-slide-to="2" class=""></li>
+                              <li data-target="#blog_posts" data-slide-to="3" class=""></li>
+                              <li data-target="#blog_posts" data-slide-to="4" class=""></li>
+                          </ol>
+                          <!-- end carousel-indicators -->
+                      </div>
+                  </div>
+                  <!-- end row -->
+              </div>
+              <!-- end container -->
+          </div>
+          <!-- end blogs -->
+          <!-- start contact -->
+          <div id="contactus" class="contactus content" data-scrollview="true">
+              <div class="container" data-animation="true" data-animation-type="fadeInUp">
+                  <h2 class="content-heading" data-animation="true" data-animation-type="fadeInDown"><span class="title-color">CONTACT</span> US</h2>
+                  <div class="divider text-center">
+                      <span class="outer-line"></span>
+                      <span class="fa fa-envelope" aria-hidden="true"></span>
+                      <span class="outer-line"></span>
+                  </div>
+                  <!-- <p class="content-desc" data-animation="true" data-animation-type="fadeInDown">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur eros dolor,<br>
+                      sed bibendum turpis luctus eget
+                  </p> -->
+              </div>
+              <!-- <div id="contactmap" style="width: 100%; height: 400px;"></div> -->
+              <!-- start container -->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.380018490002!2d80.23040164984302!3d13.011455090784716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52679fe6bd452f%3A0x611db17bcdf6c655!2sDepartment+of+Mechanical+Engineering!5e0!3m2!1sen!2sfi!4v1536496983157" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>                      </div>
+                      <div class="col-md-8 col-md-offset-2">
+                          <ul class="contact-info list-inline text-center">
+                              <li>
+                                  <i class="fa fa-map-marker"></i>
+                                  <p>
+                                      Anna University
+                                  </p>
+                              </li>
+                              <li>
+                                  <i class="fa fa-envelope"></i>
+                                  <p>
+                                      <a href="mailto:smse.ceg@gmail.com" class="nocolor">smse.ceg@gmail.com</a>
+                                  </p>
+                              </li>
+                              <li>
+                                  <i class="fa fa-phone"></i>
+                                  <p>
+                                      +91 94874 67237
+                                  </p>
+                              </li>
+                          </ul>
+                          <div class="form-container">
+                              <form name="contact-form" id="contact-form" action="javascript:void(0);" method="post">
+                                  <div class="row">
+
+                                      <div class="col-sm-12 text-center">
+                                          <p class="successmsg">
+                                              Mail sent successfully.
+                                          </p>
+                                      </div>
+                                      <div class="col-sm-6">
+                                          <div class="form-field">
+                                              <label>Participant's name*
+                                                  <input type="text" name="name" id="name" required="required">
+                                              </label>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-6">
+                                          <div class="form-field">
+                                              <label>e-mail*
+                                                  <input type="email" name="email" id="email" required="required">
+                                              </label>
+                                          </div>
+                                      </div>
+
+                                      <div class="col-sm-6">
+                                          <div class="form-field">
+                                              <label>Phone No.
+                                                  <input type="tel" name="tel" id="tel" onkeypress="return KeycheckOnlyNumeric(event);" maxlength="13" required="required">
+                                              </label>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                      <div class="form-field">
+                                        <label for="user_year">Year of Study</label>
+                                        <select class="chosen-select" id="user_year" name="user_year" required>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <div class="form-field">
+                                      <label for="user_college">Select your college</label>
+                                      <select class=" chosen-select" id="user_college" name="user_college" required>
+                                        <option value="1">CEG</option>
+                                        <option value="2">ACT</option>
+                                        <option value="3">MIT</option>
+                                        <option value="4">SAP</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                  <div class="form-field">
+                                    <label for="user_year">Select your Department</label>
+                                    <select class=" chosen-select" id="user_dept" name="user_dept//" required>
+                                      <option value="1">Material Science</option>
+                                      <option value="2">Mechanical</option>
+                                      <option value="3">Industrial</option>
+                                      <option value="4">Manufacturing</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                      <div class="col-sm-12">
+                                          <div class="form-field">
+                                              <!-- <label>Your Message*
+                                                  <textarea name="message" id="message" required></textarea>
+                                              </label> -->
+                                              <div class="text-center">
+                                                  <input type="submit" name="reg_submit" id="reg_submit" class="btn" value="Submit">
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- container -->
+          </div>
+          <!-- end contact -->
+          <!-- start footer -->
+          <div id="footer" class="footer">
+              <div class="container">
+
+                  <p>
+                      &copy; 2018 COPYRIGHT KRYSTA . ALL RIGHTS RESERVED
+                  </p>
+              </div>
+          </div>
+          <!-- end footer -->
+
+          <a href="javascript:void(0);" id="scroll-to-top"><i class="fa fa-arrow-up"></i></a>
+      </div>
+      <!-- end main-container -->
+
+        <!-- START JS  -->
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZEvpuCCcKno-6SK9VektANgv4Q-3ckuA&amp;libraries=places"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="assets/crossbrowserjs/html5shiv.js"></script>
+        <script src="assets/crossbrowserjs/respond.min.js"></script>
+        <script src="assets/crossbrowserjs/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="js/scroll.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/map.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script type="text/javascript" src="js/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+        <!--  END JS  -->
+    </body>
+</html>
