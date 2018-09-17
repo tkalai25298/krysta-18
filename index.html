@@ -170,7 +170,8 @@
                   <h2 class="content-heading" data-animation="true" data-animation-type="fadeInDown"><span class="title-color">OUR</span> EVENTS</h2>
                   <div class="divider text-center">
                       <span class="outer-line"></span>
-                      <span class="fa fa-image" aria-hidden="true"></span>
+                        <span class="fa fa-comment" aria-hidden="true"></span>
+
                       <span class="outer-line"></span>
                   </div>
                   <p class="content-desc" data-animation="true" data-animation-type="fadeInDown">
@@ -307,7 +308,7 @@
                   <h2 class="content-heading" data-animation="true" data-animation-type="fadeInDown"><span class="title-color">GAL</span>LERY</h2>
                   <div class="divider text-center">
                       <span class="outer-line"></span>
-                      <span class="fa fa-comment" aria-hidden="true"></span>
+                        <span class="fa fa-image" aria-hidden="true"></span>
                       <span class="outer-line"></span>
                   </div>
 
@@ -1252,6 +1253,32 @@
         <script src="js/popup.js"></script>
         <script src="js/map.min.js"></script>
         <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+           $('#reg_submit').on('click', function(e) {
+              e.preventDefault();
+              var f = document.getElementsByTagName('form')[0];
+              if(f.checkValidity()) {
+                 $.ajax({
+                    url: 'https://script.google.com/macros/s/AKfycbzsygBP48lPo0UAjQwXEiQPoqquZmw9qfh6NpkiGTDlDQ3xbv7h/exec',
+                    type: "post",
+                    data: $('form#register_form').serialize(),
+                    beforeSend: function() {
+                       $("#reg_submit").prop('disabled', true);
+                    },
+                    success: function(response) {
+                       console.log(response.result)
+                       alert("Registered!")
+                       $("#reg_submit").prop('disabled', false)
+                       $('form#register_form')[0].reset()
+                       $('select').children('option').first().prop('selected', true)
+                       $('select').trigger("chosen:updated")
+                    }
+                 })
+              } else {
+                 alert('Invalid Data or Empty Fields')
+              }
+           })
+        </script>
         <!--  END JS  -->
     </body>
 </html>
