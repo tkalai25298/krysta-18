@@ -18,32 +18,7 @@
         <link href="css/style-responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="css/anim.css">
-        <script type="text/javascript">
-           $('#reg_submit').on('click', function(e) {
-              e.preventDefault();
-              var f = document.getElementsByTagName('form')[0];
-              if(f.checkValidity()) {
-                 $.ajax({
-                    url: 'https://script.google.com/macros/s/AKfycbzsygBP48lPo0UAjQwXEiQPoqquZmw9qfh6NpkiGTDlDQ3xbv7h/exec',
-                    type: "post",
-                    data: $('form#register_form').serialize(),
-                    beforeSend: function() {
-                       $("#reg_submit").prop('disabled', true);
-                    },
-                    success: function(response) {
-                       console.log(response.result)
-                       alert("Registered!")
-                       $("#reg_submit").prop('disabled', false)
-                       $('form#register_form')[0].reset()
-                       $('select').children('option').first().prop('selected', true)
-                       $('select').trigger("chosen:updated")
-                    }
-                 })
-              } else {
-                 alert('Invalid Data or Empty Fields')
-              }
-           })
-        </script>
+      
         <!--  END CSS STYLE  -->
     </head>
     <body data-spy="scroll" data-target="#header-navbar" data-offset="51">
@@ -84,7 +59,7 @@
               <!-- start container -->
               <div class="container banner-content">
                   <img src="img/smse_logo.png" alt="">
-                  <h3>Society Of <span class="text-color">Materials Science</span> Engineers</h3>
+                  <h3>Society of <span class="text-color">Materials Science</span> Engineers</h3>
                   <a href="#contact-form" data-click="scroll-to-target" class="btn btn-theme">Register</a>
               </div>
               <!-- end container -->
@@ -104,7 +79,7 @@
                       <span class="outer-line"></span>
                   </div>
                   <p class="content-desc" data-animation="true" data-animation-type="fadeInDown">
-                      The Society of Materials Science Engineers of College of Engineerig,Guindy, is a disciplined and dedicated, entirely student run society, with the prime motive of empowering the student community and making them equipped to tackle all the challenges that come in their way of becoming pioneers in the field of materials science. A series of guest lectures, seminars, workshops and other events are conducted every year as a part of SMSE’s scheme for each academic year.
+                      The Society of Materials Science Engineers of College of Engineering,Guindy, is a disciplined and dedicated, entirely student run society, with the prime motive of empowering the student community and making them equipped to tackle all the challenges that come in their way of becoming pioneers in the field of materials science. A series of guest lectures, seminars, workshops and other events are conducted every year as a part of SMSE’s scheme for each academic year.
                   </p>
               </div>
               <div class="about-bg content bg parallax2">
@@ -117,7 +92,7 @@
                               <!-- start about -->
                               <div class="aboutus">
                                   <h3>About KRYSTA</h3>
-                                  <p>Krysta is the intracollege technical symposium organized by the Society of Materials Science engineers(SMSE) , usually held in the month of September for a period of  two days ,every year and is aimed at imparting knowledge and invoking the creativity of the students through many of its signature technical events. It also incorporates a few fun and lively events which are likely to be pressure busters for all the participants. Workshops, on the most “ hot and happening” topics of materials science, are the main attractions of this extravagant event. Eminent speakers from diverse backgrounds, ranging from industry to academia, grace the occasion and succed in promulgating the knowledge acquired by them over the years. Being an intracollegiate, it also plays a part in strengthening inter-department relations.
+                                  <p>Krysta is the intracollege technical symposium organized by the Society of Materials Science Engineers(SMSE) , usually held in the month of September for a period of  two days ,every year and is aimed at imparting knowledge and invoking the creativity of the students through many of its signature technical events. It also incorporates a few fun and lively events which are likely to be trust busters for all the participants. Workshops, on the most “ hot and happening” topics of materials science, are the main attractions of this extravagant event. Eminent speakers from diverse backgrounds, ranging from industry to academia, grace the occasion and succed in promulgating the knowledge acquired by them over the years. Being an intracollegiate, it also plays a part in strengthening inter-department relations.
                                 <br/><br/>The very first edition of Krysta, conducted successfully in the year 2011, received an overwhelming response. So, from then on, Krysta never fails to exceed expectations and thus continues to stand strong, representing its resounding success.  </p>
 
                               </div>
@@ -152,7 +127,7 @@
                                   <h3 class="category">Corrosion - Characterisation And Control</h3>
                                   <!-- <div class="bs-caption">2018</div> -->
 
-                                  <a href="https://www.townscript.com/e/krysta-work-312441" class="btn btn-white">Pay Now</a>
+                                  <a href="https://www.townscript.com/e/krysta-workshop-corrosion-characterisation-and-control-231034" class="btn btn-white">Pay Now</a>
                               </div>
                           </div>
                       </div>
@@ -455,7 +430,7 @@
                               <li>
                                   <i class="fa fa-phone"></i>
                                   <p>
-                                      +91 94874 67237
+                                      +91 94874 67237(General Secretary)
                                   </p>
                               </li>
                           </ul>
@@ -1233,7 +1208,6 @@
           <!-- start footer -->
           <div id="footer" class="footer">
               <div class="container">
-
                   <p>
                       &copy; 2018 COPYRIGHT KRYSTA . ALL RIGHTS RESERVED
                   </p>
